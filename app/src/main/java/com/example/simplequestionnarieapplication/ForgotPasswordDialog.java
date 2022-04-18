@@ -5,14 +5,18 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.util.Patterns;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatDialogFragment;
 
-public class ExampleDialog extends AppCompatDialogFragment {
+public class ForgotPasswordDialog extends AppCompatDialogFragment {
     private TextView tv_forgotPassword1;
     private EditText et_email1;
     private ExampleDialogListener listener;
@@ -29,14 +33,17 @@ public class ExampleDialog extends AppCompatDialogFragment {
                 .setNegativeButton("cancel", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-
                     }
                 })
                 .setPositiveButton("Submit", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        String email = et_email1.getText().toString().trim();
-                        listener.applyText(email);
+                        if (TextUtils.isEmpty(et_email1.getText().toString())) {
+                            et_email1.setError("Please Enter EmailID!");
+                        }
+                        else {
+                            Toast.makeText(getContext(), "" + et_email1.getText().toString(),Toast.LENGTH_SHORT).show();
+                        }
                     }
                 });
         et_email1 = view.findViewById(R.id.et_email1);
@@ -52,6 +59,5 @@ public class ExampleDialog extends AppCompatDialogFragment {
         }
     }
     public interface ExampleDialogListener {
-        void applyText(String et_email1);
     }
 }

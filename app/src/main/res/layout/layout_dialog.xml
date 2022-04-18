@@ -20,6 +20,13 @@
         android:orientation="vertical"
         app:layout_constraintGuide_end="20dp" />
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"/>
+<!--        android:layout_contraintGuide_end="80dp"/>-->
+
 
     <TextView
         android:id="@+id/tv_forgotPassword1"
@@ -44,7 +51,7 @@
         android:background="@drawable/text_borders"
         android:drawableStart="@drawable/ic_person"
         android:padding="10dp"
-        android:text="Email ID"
+        android:hint="Email ID"
         android:textColor="#8C6C6C"
         android:textColorHint="#7A7272"
         android:textSize="20sp"
@@ -54,6 +61,33 @@
         app:layout_constraintStart_toStartOf="@id/guidelineStart"
         app:layout_constraintTop_toBottomOf="@+id/tv_forgotPassword1"
         app:layout_constraintVertical_bias="0.082" />
+
+<!--    <Button-->
+<!--        android:id="@+id/btn_submit"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginLeft="80dp"-->
+<!--        android:text="Submit"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"-->
+<!--        app:layout_constraintHorizontal_bias="0.914"-->
+<!--        app:layout_constraintStart_toStartOf="@id/guidelineStart"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/et_email1"-->
+<!--        app:layout_constraintVertical_bias="0.164" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btn_cancel"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginRight="140dp"-->
+<!--        android:text="Cancel"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"-->
+<!--        app:layout_constraintHorizontal_bias="0.834"-->
+<!--        app:layout_constraintStart_toStartOf="@id/guidelineStart"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/et_email1"-->
+<!--        app:layout_constraintVertical_bias="0.162"-->
+<!--        app:layout_constraintStart_toEndOf="@id/guidelineTop"/>-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

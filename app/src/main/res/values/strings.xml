@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">SimpleQuestionnarieApplication</string>
+    <string-array name="spinnerlist">
+        <item>Select United States</item>
+        <item>Australlia</item>
+        <item>Europe</item>
+        <item>England</item>
+        <item>India</item>
+        <item>London</item>
+    </string-array>
+
 </resources>
